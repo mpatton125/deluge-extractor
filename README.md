@@ -4,11 +4,12 @@ Plugin for the [deluge](http://deluge-torrent.org/) torrent client that extracts
 * Target folder for extracting the torrent can be specified
 * A sub folder (name of torrent) can be created within the target folder
 * In-place extraction of the torrent in the torrent's download folder is possible as well
+* Append label to destination folder
 
 ##Supported File formats:
 
 UniX-ish supports:
-* .rar, .tar, .zip, .7z .tar.gz, .tgz, .tar.bz2, .tbz .tar.lzma, .tlz, .tar.xz, .txz
+* .rar, *.r00, .tar, .zip, .7z .tar.gz, .tgz, .tar.bz2, .tbz .tar.lzma, .tlz, .tar.xz, .txz
 
 Windows supports:
 * .rar, .zip, .tar, .7z, .xz, .lzma
