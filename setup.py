@@ -41,16 +41,16 @@
 from setuptools import setup
 
 __plugin_name__ = "SimpleExtractor"
-__author__ = "Chris Yereaztian"
-__author_email__ = "chris.yereaztian@gmail.com"
-__version__ = "0.4.1"
-__url__ = "github.com/cvarta/deluge-extractor"
+__author__ = "Mike Patton"
+__author_email__ = "mpatton125@gmail.com"
+__version__ = "0.4.2"
+__url__ = "github.com/mpatton125/deluge-extractor"
 __license__ = "GPLv3"
 __description__ = "Extract files upon torrent completion"
 __long_description__ = """
 Extract files upon torrent completion
 
-Supports: .rar, .tar, .zip, .7z .tar.gz, .tgz, .tar.bz2, .tbz .tar.lzma, .tlz, .tar.xz, .txz
+Supports: .rar, .r00, .tar, .zip, .7z .tar.gz, .tgz, .tar.bz2, .tbz .tar.lzma, .tlz, .tar.xz, .txz
 
 Windows support: .rar, .zip, .tar, .7z, .xz, .lzma
 ( Requires 7-zip installed: http://www.7-zip.org/ )
