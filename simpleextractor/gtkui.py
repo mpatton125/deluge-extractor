@@ -73,7 +73,8 @@ class GtkUI(GtkPluginBase):
         config = {
             "extract_path": path,
             "use_name_folder": self.glade.get_widget("chk_use_name").get_active(),
-            "in_place_extraction": self.glade.get_widget("chk_in_place_extraction").get_active()
+            "in_place_extraction": self.glade.get_widget("chk_in_place_extraction").get_active(),
+            "append_label_todir": self.glade.get_widget("chk_append_label").get_active()
         }
 
         client.extractor.set_config(config)
@@ -94,5 +95,6 @@ class GtkUI(GtkPluginBase):
 
             self.glade.get_widget("chk_use_name").set_active(config["use_name_folder"])
             self.glade.get_widget("chk_in_place_extraction").set_active(config["in_place_extraction"])
+            self.glade.get_widget("chk_append_label").set_active(config["append_label_todir"])
 
         client.extractor.get_config().addCallback(on_get_config)
