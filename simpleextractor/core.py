@@ -53,7 +53,8 @@ from extractor.which import which
 DEFAULT_PREFS = {
     "extract_path": "",
     "use_name_folder": False,
-    "in_place_extraction": True
+    "in_place_extraction": True,
+    "append_label_todir": False
 }
 
 if windows_check():
@@ -99,6 +100,7 @@ else:
 
     EXTRACT_COMMANDS = {
         ".rar": ["unrar", "x -o+ -y"],
+        ".r00": ["unrar", "x -o+ -y"],
         ".tar": ["tar", "-xf"],
         ".zip": ["unzip", ""],
         ".tar.gz": ["tar", "-xzf"], ".tgz": ["tar", "-xzf"],
@@ -150,9 +152,15 @@ class Core(CorePluginBase):
 
             # Now that we have the cmd, lets run it to extract the files
             fpath = os.path.join(tid_status["save_path"], os.path.normpath(f["path"]))
-
+                        
             # Get the destination path
             dest = os.path.normpath(self.config["extract_path"])
+            # Add label to path if required
+            if self.config["append_label_todir"]:
+                get_label = component.get("Core").get_torrent_status(torrent_id,["label"])
+                label = get_label["label"]
+                dest = os.path.join(dest, label)
+                
             if self.config["use_name_folder"]:
                 name = tid_status["name"]
                 dest = os.path.join(dest, name)
