@@ -65,6 +65,14 @@ Deluge.ux.preferences.SimpleExtractorPage = Ext.extend(Ext.Panel, {
             hideLabel: true,
             boxLabel: _('Extract torrent in-place')
         });
+        
+        this.append_label_todir = fieldset.add({
+            xtype: 'checkbox',
+            name: 'append_label_todir',
+            height: 22,
+            hideLabel: true,
+            boxLabel: _('Append label to destination')
+        });        
 
         this.on('show', this.updateConfig, this);
     },
@@ -76,6 +84,7 @@ Deluge.ux.preferences.SimpleExtractorPage = Ext.extend(Ext.Panel, {
         config['extract_path'] = this.extract_path.getValue();
         config['use_name_folder'] = this.use_name_folder.getValue();
         config['in_place_extraction'] = this.in_place_extraction.getValue();
+        config['append_label_todir'] = this.append_label_todir.getValue();
 
         deluge.client.simpleextractor.set_config(config);
     },
@@ -90,6 +99,7 @@ Deluge.ux.preferences.SimpleExtractorPage = Ext.extend(Ext.Panel, {
                 this.extract_path.setValue(config['extract_path']);
                 this.use_name_folder.setValue(config['use_name_folder']);
                 this.in_place_extraction.setValue(config['in_place_extraction']);
+                this.append_label_todir.setValue(config['append_label_todir']);
             },
             scope: this
         });
