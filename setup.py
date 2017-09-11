@@ -43,7 +43,7 @@ from setuptools import setup
 __plugin_name__ = "SimpleExtractor"
 __author__ = "Mike Patton"
 __author_email__ = "mpatton125@gmail.com"
-__version__ = "0.4.2"
+__version__ = "0.4.3"
 __url__ = "github.com/mpatton125/deluge-extractor"
 __license__ = "GPLv3"
 __description__ = "Extract files upon torrent completion"
