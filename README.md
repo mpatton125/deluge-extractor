@@ -25,7 +25,7 @@ To build the python egg file:
 
 # Installation Instructions
 
-Download the [egg file](https://github.com/cvarta/deluge-extractor/releases/download/v.0.4.1/SimpleExtractor-0.4.1-py2.7.egg) of the plugin.
+Download the [egg file](https://github.com/mpatton125/deluge-extractor/releases/download/v.0.4.2/SimpleExtractor-0.4.2-py2.7.egg) of the plugin.
 
 #####Notes
 * Plugin eggs have the Python version encoded in the filename and will only load in Deluge if the versions match. (e.g. Plugin-1.0-py2.7.egg is a Python 2.7 egg.)
